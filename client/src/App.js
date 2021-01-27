@@ -1,45 +1,28 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import Item from './components/Item';
+import ItemList from './components/ItemList';
+import data from './models/items.json';
 
-// SERVICES
-import userService from './services/userService';
+const App = (props) => {
 
-function App() {
-  const [users, setusers] = useState(null);
+     const [items] = useState(data);
 
-  useEffect(() => {
-    if (!users) {
-      getusers();
-    }
-  });
+     const App = (props) => {
+        const [items] = useState(data);
+        
+       
+        return <ItemList items={items} />
+       }
+       
+     if (items.length === 0 ) {
+         return 'No items found' ;
+     }
 
-  const getusers = async () => {
-    let res = await userService.getAll();
-    setusers(res);
-  };
-
-  const renderUser = (user) => {
     return (
-      <li key={user._id}>
-        <h3>
-          {`${user.first_name} 
-          ${user.last_name}`}
-        </h3>
-        <p>{user.location}</p>
-      </li>
+           <div>
+               <ItemList items = { items } />
+           </div>
+         
     );
-  };
-
-  return (
-    <div>
-      <ul>
-        {users && users.length > 0 ? (
-          users.map((user) => renderUser(user))
-        ) : (
-          <p>No users found</p>
-        )}
-      </ul>
-    </div>
-  );
 }
-
 export default App;

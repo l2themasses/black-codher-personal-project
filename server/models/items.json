@@ -1,27 +1,32 @@
 [
     {
-        "product": "cake",
-        "description": " ",
-        "price": ""
+        "id" : 1,
+        "product": "Cycling Shorts",
+        "description": "Colourful sports wear ",
+        "price": "20"
     },
     {
-        "product": "",
-        "description": " ",
-        "price": ""
+        "id" : 2,
+        "product": "Leggings",
+        "description": "Colourful sports wear ",
+        "price": "25"
     },
     {
-        "product": "",
-        "description": " ",
-        "price": ""
+        "id" : 3,
+        "product": "Racer Vest",
+        "description": "Colourful sports wear",
+        "price": "25"
     },
     {
-        "product": "",
-        "description": " ",
-        "price": ""
+        "id" : 4,
+        "product": "Sports Bra",
+        "description": "Colourful sports wear ",
+        "price": "30"
     },
     {
-       "product": "",
-       "description": " ",
-       "price": ""
+        "id" : 5,
+       "product": "Joggers",
+       "description": "Colourful sports wear",
+       "price": "35"
    }
 ]
